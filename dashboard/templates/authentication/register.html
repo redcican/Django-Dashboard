@@ -1,0 +1,63 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                    <div class="card-body">
+                                        <form role="form" method="post" action="">
+                                            {% csrf_token %} 
+                                            {% include 'partials/_messages.html' %}
+                                            <div class="row mb-3">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        {{ form.username }}
+                                                        <label>Username</label>
+                                                    </div>
+                                                    <span class="text-danger">{{ form.username.errors }}</span>
+
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                 {{ form.email }}
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                         {{ form.password1 }}
+                                                        <label>Password</label>
+                                                    </div>
+                                                    <span class="text-danger">{{ form.password1.errors }}</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        {{ form.password2 }}
+                                                        <label>Confirm Password</label>
+                                                    </div>
+                                                     <span class="text-danger">{{ form.password2.errors }}</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4 mb-0">
+                                                <div class="d-grid">
+                                                <button type="submit" name="register" class="btn btn-primary btn-block">Create Account</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="{% url 'login' %}">Have an account? Go to login</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            </div>
+{% endblock content %}
+
