@@ -99,7 +99,7 @@ def register_user(request):
             )
             EmailThread(email).start()
             messages.success(
-                request, 'Account successfully created, please check your email toactivate your account')
+                request, 'Account successfully created, please check your email to activate your account')
             return render(request, 'authentication/register.html', {"form": form})
 
         else:
