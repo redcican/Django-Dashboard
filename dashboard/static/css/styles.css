@@ -11264,3 +11264,19 @@ body {
   border-radius: 0.25rem !important;
 }
 
+.card .avatar {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.card-user .avatar {
+  width: 124px;
+  height: 124px;
+  border: 5px solid #2b3553;
+  border-bottom-color: transparent;
+  background-color: transparent;
+  position: relative;
+}

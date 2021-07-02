@@ -106,9 +106,9 @@
             <div class="block block-four"></div>
             <a href="javascript:void(0)">
               <img class="avatar" {% if values.avatar %} src="{{values.avatar.url}}" 
-                                  {% else %}src="/static/assets/img/emilyz.jpg" 
-                                  {% endif %}alt="Bill Gates photo - when buys a Linux.">
-              {% comment %} <img class="avatar" src="{{values.avatar.url}}" alt="Bill Gates photo - when buys a Linux."> {% endcomment %}
+                                  {% else %}src="{% static 'assets/img/default-avatar.png'%}" 
+                                  {% endif %}alt="Bill Gates photo - when buys a Linux."
+                    style="width: 124px; height: 124px; border-bottom-color: transparent; background-color:transparent; position: relative;">
               <h5 class="title">
                 {{ request.user.username }}
               </h5>
@@ -119,8 +119,7 @@
           </div>
         </p>
         <div class="card-description">
-          Linux, my favorite OS - I admin that windows is just a big mistake.
-          Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+          {{values.bio}}
         </div>
       </div>
       <div class="card-footer">

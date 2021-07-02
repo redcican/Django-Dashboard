@@ -23,6 +23,8 @@ def pages(request):
         context['segment'] = load_template
 
         html_template = loader.get_template(load_template)
+        # import pdb
+        # pdb.set_trace()
         return HttpResponse(html_template.render(context, request))
 
     except template.TemplateDoesNotExist:
