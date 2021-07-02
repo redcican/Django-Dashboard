@@ -108,7 +108,8 @@
               <img class="avatar" {% if values.avatar %} src="{{values.avatar.url}}" 
                                   {% else %}src="{% static 'assets/img/default-avatar.png'%}" 
                                   {% endif %}alt="Bill Gates photo - when buys a Linux."
-                    style="width: 124px; height: 124px; border-bottom-color: transparent; background-color:transparent; position: relative;">
+                       style="width: 124px; height: 124px; border-bottom-color: transparent; background-color:transparent; position: relative;">
+                 
               <h5 class="title">
                 {{ request.user.username }}
               </h5>

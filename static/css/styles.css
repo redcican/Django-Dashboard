@@ -11263,20 +11263,3 @@ body {
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
 }
-
-.card-user {
-  overflow: hidden;
-}
-
-.card-user .image {
-  height: 120px;
-}
-
-.card-user .avatar {
-  width: 124px;
-  height: 124px;
-  border: 5px solid #2b3553;
-  border-bottom-color: transparent;
-  background-color: transparent;
-  position: relative;
-}

@@ -15,12 +15,13 @@
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{% comment %} <i class="fas fa-user fa-fw"></i> {% endcomment %}
-                    <img {% if request.user.profile.avatar %}
+                    <img 
+                        {% if request.user.profile.avatar %}
                             src="{{request.user.profile.avatar.url}}" 
                         {% else %}
                             src="/static/assets/img/default-avatar.png"
                         {% endif %}
-                            style="width: 42px; height: 42px; border-radius: 50%">&nbsp;{{request.user}}
+                           style="width: 42px; height: 42px; border-radius: 50%" >&nbsp;{{request.user}}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
